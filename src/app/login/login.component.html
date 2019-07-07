@@ -1,0 +1,52 @@
+<div class="bg">
+  <!-- Login Modal -->
+  <div class="container w3-padding-32">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6 w3-border bgOpacity">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">LOGIN</h4>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <!-- Navigation Buttons -->
+          <ul class="nav nav-pills" role="tablist">
+            <li class="nav-item w3-center" style="width: 33%;">
+              <a class="nav-link active" data-toggle="pill" href="#home" (click)="setLoginType('Resturant')" >Restaurant</a>
+            </li>
+            <li class="nav-item w3-center" style="width: 33%;">
+              <a class="nav-link" data-toggle="pill" href="#home" (click)="setLoginType('Charity')"  >Charity</a>
+            </li>
+            <li class="nav-item w3-center" style="width: 33%;">
+              <a class="nav-link" data-toggle="pill" href="#menu2" (click)="setLoginType('Delivery Boy')" >Delivery Boy</a>
+            </li>
+          </ul>
+
+          <!-- navigation Body -->
+          <div class="tab-content">
+            <div id="home" class="container tab-pane active"><br>
+                <label>Username</label><br>
+                <input type="text" name="username" class="form-control"><br>
+                <label>Password</label><br>
+                <input type="text" name="pwd" class="form-control"><br>
+                <a style="cursor: pointer;" data-dismiss="modal" routerLink="/SignUp" class="w3-right text-primary">
+                  <label><b>New User? Click here</b></label>
+                </a><br><br>
+                <button class="btn bg-dark w3-wide w3-text-white w3-center" (click)="IntiateLogin()" >{{ type }} Login</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="w3-container" style="padding: 18px;">
+          <label>&copy; Copyright Reserved Wastage Reduction</label>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
